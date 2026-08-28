@@ -1,8 +1,10 @@
+import { Link } from 'react-router-dom'
+
 function Header({ currency, onCurrencyChange, theme, toggleTheme }) {
   return (
     <header className="header">
       <div className="header-left">
-        <div className="logo">
+        <Link to="/" className="logo">
           <span className="logo-mark">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="4 7 4 4 20 4 20 7" />
@@ -11,13 +13,13 @@ function Header({ currency, onCurrencyChange, theme, toggleTheme }) {
             </svg>
           </span>
           <span className="logo-text">ZEPHYR INNOVATION</span>
-        </div>
+        </Link>
       </div>
 
       <nav className="header-nav">
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="#blog">Blog</a>
+        <Link to="/about">About</Link>
+        <Link to="/faq">FAQ</Link>
+        <Link to="/contact">Contact</Link>
       </nav>
 
       <div className="header-controls">
@@ -87,6 +89,10 @@ function Header({ currency, onCurrencyChange, theme, toggleTheme }) {
           text-decoration: none;
         }
 
+        .logo:hover {
+          color: var(--text-primary);
+        }
+
         .logo-mark {
           display: flex;
           align-items: center;
@@ -95,7 +101,7 @@ function Header({ currency, onCurrencyChange, theme, toggleTheme }) {
 
         .logo-text {
           font-size: 0.7rem;
-          font-weight: 400;
+          font-weight: 500;
           letter-spacing: 0.12em;
           color: var(--text-muted);
         }
@@ -108,6 +114,7 @@ function Header({ currency, onCurrencyChange, theme, toggleTheme }) {
 
         .header-nav a {
           font-size: 0.75rem;
+          font-weight: 500;
           color: var(--text-muted);
           text-decoration: none;
           transition: color var(--transition);
@@ -159,6 +166,7 @@ function Header({ currency, onCurrencyChange, theme, toggleTheme }) {
           border-radius: var(--radius-sm);
           padding: 0.35rem 2rem 0.35rem 0.65rem;
           font-size: 0.7rem;
+          font-weight: 500;
           color: var(--text-primary);
           cursor: pointer;
           appearance: none;

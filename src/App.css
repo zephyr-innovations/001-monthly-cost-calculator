@@ -27,7 +27,7 @@
 
 .hero h1 {
   font-size: 2.6rem;
-  font-weight: 300;
+  font-weight: var(--font-weight-bold);
   letter-spacing: -0.03em;
   color: var(--text-primary);
   margin-bottom: 0.5rem;
@@ -36,7 +36,7 @@
 .hero .subtitle {
   font-size: 1.05rem;
   color: var(--text-muted);
-  font-weight: 300;
+  font-weight: var(--font-weight-regular);
   letter-spacing: 0.01em;
   max-width: 80%;
   margin: 0 auto;
@@ -65,7 +65,7 @@
   text-transform: uppercase;
   letter-spacing: 0.14em;
   margin-bottom: 1rem;
-  font-weight: 400;
+  font-weight: var(--font-weight-medium);
 }
 
 .expense-form .form-row {
@@ -86,7 +86,7 @@
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-weight: 400;
+  font-weight: var(--font-weight-medium);
 }
 
 .expense-form .form-group input,
@@ -99,6 +99,7 @@
   font-size: 0.9rem;
   color: var(--text-primary);
   transition: border-color var(--transition), background-color var(--transition);
+  font-weight: var(--font-weight-regular);
 }
 
 .expense-form .form-group input:focus,
@@ -110,7 +111,7 @@
 
 .expense-form .form-group input::placeholder {
   color: var(--text-faint);
-  font-weight: 300;
+  font-weight: var(--font-weight-regular);
 }
 
 .expense-form .form-actions {
@@ -132,7 +133,7 @@
   height: 42px;
   display: flex;
   align-items: center;
-  font-weight: 400;
+  font-weight: var(--font-weight-medium);
 }
 
 .expense-form .btn-add:hover {
@@ -165,24 +166,24 @@
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  font-weight: 400;
+  font-weight: var(--font-weight-medium);
 }
 
 .expense-list .list-header .expense-count {
   font-size: 0.7rem;
-  color: var(--text-faint);
-  font-weight: 300;
+  color: var(--text-dim);
+  font-weight: var(--font-weight-regular);
 }
 
 .expense-list .empty-state {
   text-align: center;
   padding: 2rem 1.5rem;
-  color: var(--text-faint);
+  color: var(--text-dim);
   font-size: 0.9rem;
   border: 1px dashed var(--border-subtle);
   border-radius: var(--radius-md);
   background-color: var(--bg-card);
-  font-weight: 300;
+  font-weight: var(--font-weight-regular);
 }
 
 .expense-list .empty-state .empty-icon {
@@ -212,7 +213,7 @@
 .expense-item .expense-name {
   font-size: 0.95rem;
   color: var(--text-primary);
-  font-weight: 400;
+  font-weight: var(--font-weight-medium);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -223,7 +224,7 @@
   color: var(--text-muted);
   font-variant-numeric: tabular-nums;
   text-align: right;
-  font-weight: 300;
+  font-weight: var(--font-weight-regular);
 }
 
 .expense-item .expense-frequency {
@@ -232,7 +233,7 @@
   text-transform: lowercase;
   text-align: center;
   font-variant-numeric: tabular-nums;
-  font-weight: 300;
+  font-weight: var(--font-weight-regular);
 }
 
 .expense-item .expense-monthly {
@@ -240,7 +241,7 @@
   color: var(--text-secondary);
   text-align: right;
   font-variant-numeric: tabular-nums;
-  font-weight: 400;
+  font-weight: var(--font-weight-semibold);
   letter-spacing: -0.01em;
 }
 
@@ -248,7 +249,7 @@
   background: none;
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
-  color: var(--text-faint);
+  color: var(--text-dim);
   padding: 0.15rem 0.5rem;
   font-size: 0.9rem;
   cursor: pointer;
@@ -295,12 +296,12 @@
   color: var(--text-dim);
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-weight: 400;
+  font-weight: var(--font-weight-medium);
 }
 
 .summary .summary-item .summary-value {
   font-size: 2.8rem;
-  font-weight: 300;
+  font-weight: var(--font-weight-bold);
   color: var(--text-primary);
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.03em;
@@ -311,22 +312,22 @@
   font-size: 1.8rem;
   color: var(--text-muted);
   margin-right: 0.05rem;
-  font-weight: 300;
+  font-weight: var(--font-weight-regular);
 }
 
 .summary .summary-item .summary-sub {
   font-size: 0.7rem;
   color: var(--text-faint);
   margin-top: 0.05rem;
-  font-weight: 300;
+  font-weight: var(--font-weight-regular);
 }
 
 .summary .empty-summary {
-  color: var(--text-faint);
+  color: var(--text-dim);
   font-size: 0.9rem;
   text-align: center;
   padding: 0.25rem 0;
-  font-weight: 300;
+  font-weight: var(--font-weight-regular);
 }
 
 /* ---------- VALIDATION STYLES ---------- */
@@ -361,7 +362,7 @@
   margin-top: 0.25rem;
   padding-left: 0.25rem;
   letter-spacing: 0.01em;
-  font-weight: 300;
+  font-weight: var(--font-weight-regular);
 }
 
 [data-theme="light"] .expense-form .error-message {
@@ -396,7 +397,7 @@
 
 .feature-card .card-title {
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: var(--font-weight-semibold);
   color: var(--text-primary);
   margin-bottom: 0.25rem;
 }
@@ -404,8 +405,307 @@
 .feature-card .card-description {
   font-size: 0.8rem;
   color: var(--text-muted);
-  font-weight: 300;
+  font-weight: var(--font-weight-regular);
   line-height: 1.5;
+}
+
+/* ---------- PAGES (About, FAQ, Contact, Privacy, Terms) ---------- */
+.page {
+  padding: 2rem 0 3rem;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.page-section {
+  margin-bottom: 2rem;
+}
+
+.page-section h2 {
+  font-size: 1.15rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.page-section h3 {
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-section h4 {
+  font-size: 0.95rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.page-section p {
+  color: var(--text-secondary);
+  font-weight: var(--font-weight-regular);
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+}
+
+.page-section ul,
+.page-section ol {
+  color: var(--text-secondary);
+  font-weight: var(--font-weight-regular);
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+}
+
+.page-section li {
+  margin-bottom: 0.3rem;
+}
+
+.page-section code {
+  background-color: var(--bg-tertiary);
+  padding: 0.1rem 0.4rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  font-family: monospace;
+}
+
+.page-section strong {
+  color: var(--text-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* About Page Specific */
+.about-page .steps-list {
+  list-style: none;
+  padding-left: 0;
+  counter-reset: step;
+}
+
+.about-page .steps-list li {
+  counter-increment: step;
+  padding: 0.6rem 0 0.6rem 2.5rem;
+  position: relative;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.about-page .steps-list li:last-child {
+  border-bottom: none;
+}
+
+.about-page .steps-list li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.about-page .formula-table {
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+}
+
+.about-page .formula-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+.about-page .formula-row .formula-label {
+  color: var(--text-muted);
+  font-weight: var(--font-weight-medium);
+}
+
+.about-page .formula-row .formula-code {
+  font-family: monospace;
+  color: var(--text-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.about-page .frequency-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about-page .frequency-list li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.5rem;
+}
+
+.about-page .frequency-list li:last-child {
+  border-bottom: none;
+}
+
+.about-page .frequency-list .frequency-note {
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.about-page .example-box {
+  background-color: var(--bg-tertiary);
+  border-left: 3px solid var(--accent);
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+  border-radius: var(--radius-sm);
+}
+
+.about-page .example-box .example-calculation {
+  font-size: 1rem;
+  color: var(--text-primary);
+  font-weight: var(--font-weight-medium);
+  padding: 0.3rem 0;
+}
+
+.about-page .data-list,
+.about-page .limitations-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about-page .data-list li,
+.about-page .limitations-list li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.about-page .data-list li:last-child,
+.about-page .limitations-list li:last-child {
+  border-bottom: none;
+}
+
+/* FAQ Page Specific */
+.faq-page .faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.faq-page .faq-item {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  transition: border-color var(--transition);
+}
+
+.faq-page .faq-item:hover {
+  border-color: var(--border-secondary);
+}
+
+.faq-page .faq-item.open {
+  border-color: var(--border-secondary);
+}
+
+.faq-page .faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+  text-align: left;
+  transition: background-color var(--transition);
+  border-radius: 0;
+}
+
+.faq-page .faq-question:hover {
+  background-color: var(--bg-hover);
+}
+
+.faq-page .faq-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  font-weight: var(--font-weight-medium);
+}
+
+.faq-page .faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 1rem;
+  color: var(--text-secondary);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.7;
+}
+
+.faq-page .faq-item.open .faq-answer {
+  max-height: 1000px;
+  padding: 0 1rem 1.25rem;
+}
+
+.faq-page .faq-answer ul {
+  padding-left: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.faq-page .faq-answer li {
+  margin-bottom: 0.2rem;
+}
+
+.faq-page .faq-answer code {
+  background-color: var(--bg-tertiary);
+  padding: 0.1rem 0.4rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  font-family: monospace;
+}
+
+.faq-page .faq-answer strong {
+  color: var(--text-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Contact Page Specific */
+.contact-page .page-section p {
+  max-width: 600px;
+}
+
+/* Privacy & Terms Page Specific */
+.privacy-page .page-section ul,
+.terms-page .page-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.privacy-page .page-section li,
+.terms-page .page-section li {
+  padding: 0.3rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.privacy-page .page-section li:last-child,
+.terms-page .page-section li:last-child {
+  border-bottom: none;
 }
 
 /* ---------- RESPONSIVE ---------- */
@@ -510,6 +810,24 @@
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+  
+  .page {
+    padding: 1.5rem 0 2rem;
+  }
+  
+  .page-title {
+    font-size: 1.6rem;
+  }
+  
+  .about-page .formula-row {
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+  
+  .about-page .frequency-list li {
+    flex-direction: column;
+    gap: 0.1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -549,5 +867,13 @@
   
   .feature-card {
     padding: 1rem 1rem 1.25rem;
+  }
+  
+  .page-title {
+    font-size: 1.3rem;
+  }
+  
+  .page-section h2 {
+    font-size: 1rem;
   }
 }

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 function Footer() {
   return (
     <footer className="footer">
@@ -7,15 +9,15 @@ function Footer() {
         </p>
         
         <div className="footer-links">
-          <a href="#privacy">Privacy Policy</a>
+          <Link to="/about">About</Link>
           <span className="separator">|</span>
-          <a href="#terms">Terms of Use</a>
+          <Link to="/faq">FAQ</Link>
           <span className="separator">|</span>
-          <a href="#about">About</a>
+          <Link to="/contact">Contact</Link>
           <span className="separator">|</span>
-          <a href="#contact">Contact</a>
+          <Link to="/privacy">Privacy Policy</Link>
           <span className="separator">|</span>
-          <a href="#blog">Blog</a>
+          <Link to="/terms">Terms of Use</Link>
         </div>
         
         <p className="footer-copyright">
@@ -40,8 +42,8 @@ function Footer() {
 
         .footer-brand {
           font-size: 0.75rem;
+          font-weight: 400;
           color: var(--text-muted);
-          font-weight: 300;
         }
 
         .footer-brand .heart {
@@ -54,6 +56,7 @@ function Footer() {
           justify-content: center;
           gap: 0.25rem 0.75rem;
           font-size: 0.7rem;
+          font-weight: 400;
         }
 
         .footer-links a {
@@ -73,8 +76,8 @@ function Footer() {
 
         .footer-copyright {
           font-size: 0.6rem;
+          font-weight: 400;
           color: var(--text-faint);
-          font-weight: 300;
         }
 
         @media (max-width: 768px) {

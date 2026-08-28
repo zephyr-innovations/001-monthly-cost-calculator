@@ -1,11 +1,14 @@
 import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Header from './components/Header'
-import ExpenseForm from './components/ExpenseForm'
-import ExpenseList from './components/ExpenseList'
-import Summary from './components/Summary'
-import FeatureCards from './components/FeatureCards'
 import Footer from './components/Footer'
+import Home from './pages/Home'
+import About from './pages/About'
+import FAQ from './pages/FAQ'
+import Contact from './pages/Contact'
+import Privacy from './pages/Privacy'
+import Terms from './pages/Terms'
 
 function App() {
   // State for theme (dark is default)
@@ -49,48 +52,37 @@ function App() {
   }
 
   return (
-    <div className="app" data-theme={theme}>
-      {/* HEADER */}
-      <Header 
-        currency={currency}
-        onCurrencyChange={handleCurrencyChange}
-        theme={theme}
-        toggleTheme={toggleTheme}
-      />
+    <BrowserRouter>
+      <div className="app" data-theme={theme}>
+        <Header 
+          currency={currency}
+          onCurrencyChange={handleCurrencyChange}
+          theme={theme}
+          toggleTheme={toggleTheme}
+        />
 
-      {/* HERO SECTION */}
-      <section className="hero">
-               <h1>How Much Is This Per Month?</h1>
-        <p className="subtitle">Add recurring expenses and see what they really cost each month.</p>
-      </section>
-
-      {/* CALCULATOR SECTION */}
-      <main className="app-main">
-        <div className="calculator-container">
-          <ExpenseForm 
-            currency={currency}
-            onAddExpense={handleAddExpense}
+        <Routes>
+          <Route 
+            path="/" 
+            element={
+              <Home 
+                expenses={expenses}
+                currency={currency}
+                onAddExpense={handleAddExpense}
+                onDeleteExpense={handleDeleteExpense}
+              />
+            } 
           />
+          <Route path="/about" element={<About />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
+        </Routes>
 
-          <ExpenseList 
-            expenses={expenses}
-            currency={currency}
-            onDelete={handleDeleteExpense}
-          />
-
-          <Summary 
-            expenses={expenses}
-            currency={currency}
-          />
-        </div>
-
-        {/* FEATURE CARDS */}
-        <FeatureCards />
-
-        {/* FOOTER */}
         <Footer />
-      </main>
-    </div>
+      </div>
+    </BrowserRouter>
   )
 }
 
